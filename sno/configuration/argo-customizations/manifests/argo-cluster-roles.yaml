@@ -12,3 +12,6 @@ rules:
   - apiGroups: ["lvm.topolvm.io"]
     resources: ["lvmclusters"]
     verbs: ["get", "list", "watch", "patch", "update"]
+  - apiGroups: ["kubevirt.io"]
+    resources: ["virtualmachines"]
+    verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
