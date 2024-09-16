@@ -1,0 +1,3 @@
+htpasswd
+htpasswd-secret.yaml
+htpasswd.sh
