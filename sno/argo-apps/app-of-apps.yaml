@@ -2,13 +2,14 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: app-of-apps-config
+  namespace: openshift-gitops
   annotations:
     argocd.argoproj.io/sync-wave: '1'
 spec:
   project: default
   source:
     path: sno/argo-apps/argo-applications
-    repoURL: https://github.com/maxisses/openshift-virt.git
+    repoURL: https://github.com/maxisses/openshift-virt-config.git
     targetRevision: main
   destination:
     namespace: openshift-gitops
