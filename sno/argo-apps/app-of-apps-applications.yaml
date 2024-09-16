@@ -8,7 +8,7 @@ metadata:
 spec:
   project: default
   source:
-    path: sno/argo-apps/argo-applications
+    path: sno/argo-apps/argo-apps-applications
     repoURL: https://github.com/maxisses/openshift-virt-config.git
     targetRevision: main
   destination:
