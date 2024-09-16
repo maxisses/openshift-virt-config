@@ -1,0 +1,18 @@
+apiVersion: cdi.kubevirt.io/v1beta1
+kind: DataVolume
+metadata:
+  name: win10
+  namespace: openshift-virtualization-os-images
+  labels:
+    instancetype.kubevirt.io/default-instancetype: u1.medium
+    instancetype.kubevirt.io/default-preference: windows.10
+spec:
+  source:
+    http:
+      url: "https://software.download.prss.microsoft.com/dbazure/Win10_22H2_EnglishInternational_x64v1.iso?t=2c0f884e-8b49-43cd-8953-358a8f3b857d&P1=1726517953&P2=601&P3=2&P4=sk42giMU2BzygneO5WhCOJvCbeT2eKNmcCwviR%2bR3HFkB5YHHdD%2bHzglaz6tofttyX%2bbveiggdEBsjZSORzNPVYzypb1Sp73E%2foteHoritZlAMXUzabJXOyNV57v8DlAa3yLxu10LzUPvWSCkjuBLwg%2bfpr2dE4Slw2mBSQOzpy%2ftHojWsaCLMgaxjzmHYL9yGEFRiLCSlT%2fcr5f%2bcgwuK16omShFOyHXMxXEuV5ZpGsWq38sPzhkSaR2R6WWVZRibol6aPPI3JPYYB2sOfkjHN%2fXvp1UUWs2rXy7BgWjDDs7pbH9q90xV3eNwfEw%2bmNcwHO2HK6XtXnLuNlBW1apw%3d%3d" # Replace with actual URL to your ISO.
+  pvc:
+    accessModes:
+      - ReadWriteOnce
+    resources:
+      requests:
+        storage: 25Gi
