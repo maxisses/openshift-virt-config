@@ -3,6 +3,8 @@ kind: LVMCluster
 metadata:
   name: my-lvmcluster
   namespace: openshift-storage
+  annotations:
+    argocd.argoproj.io/sync-options: ServerSideApply=true
 spec:
   storage:
     deviceClasses:
