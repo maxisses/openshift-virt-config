@@ -9,3 +9,6 @@ rules:
   - apiGroups: ["bitnami.com"]
     resources: ["sealedsecrets"]
     verbs: ["get", "list", "watch", "create", "update", "patch", "delete"]
+  - apiGroups: ["lvm.topolvm.io"]
+    resources: ["lvmclusters"]
+    verbs: ["get", "list", "watch", "patch", "update"]
