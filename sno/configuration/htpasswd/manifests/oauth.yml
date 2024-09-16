@@ -6,9 +6,9 @@ metadata:
     argocd.argoproj.io/sync-options: ServerSideApply=true
 spec:
   identityProviders:
-    - name: fridgeusers
+    - name: htpasswd-login
       mappingMethod: claim
       type: HTPasswd
       htpasswd:
         fileData:
-          name: keepout
+          name: htpasswd-secret
