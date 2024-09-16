@@ -1,0 +1,19 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: lvm-storage-app
+spec:
+  project: default
+  source:
+    path: sno/configuration/local-storage/manifests
+    repoURL: https://github.com/maxisses/openshift-virt-config.git
+    targetRevision: main
+  destination:
+    namespace: openshift-gitops
+    server: 'https://kubernetes.default.svc'
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true
