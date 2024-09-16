@@ -33,6 +33,9 @@ subjects:
   - kind: User
     name: Oliver
     apiGroup: rbac.authorization.k8s.io
+  - kind: User
+    name: Max
+    apiGroup: rbac.authorization.k8s.io
 roleRef:
   kind: ClusterRole
   name: cluster-admin
